@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Message: @ViewBag.Message</h2>
+<h2>NumTimes: @ViewBag.NumTimes</h2>
+
+@if (ViewBag.Message != "請填寫姓名" && ViewBag.NumTimes.ToString() != "請使用數字")
+{
+    <ul>
+        @for (int i = 0; i < (int)ViewBag.NumTimes; i++)
+        {
+            <li>@ViewBag.Message</li>
+        }
+    </ul>
+}
+else
+{
+    <p style="color: red;">請填寫完整資料!!!</p>
+}
