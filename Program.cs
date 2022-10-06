@@ -5,6 +5,12 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
+// 顯示環境變數
+foreach (var c in builder.Configuration.AsEnumerable())
+{
+    Console.WriteLine(c.Key + " = " + c.Value);
+}
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
