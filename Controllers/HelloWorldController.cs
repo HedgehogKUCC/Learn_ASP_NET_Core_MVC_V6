@@ -18,7 +18,7 @@ namespace MvcMovie.Controllers
 
         // GET: /HelloWorld/Welcome/
         // Requires using System.Text.Encodings.Web;
-        public IActionResult Welcome(string name, string numTimes = "1")
+        public IActionResult Welcome(string? name, string numTimes = "1")
         {
             /*
              *  使用 C# 選擇性參數功能來指出若未針對 numTimes 參數傳遞任何值時，該參數預設為 1。
